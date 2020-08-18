@@ -2,21 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-let city = {
-  name: "Minneapolis",
-  country: "Minnesota",
-};
+function Lake({ name }) {
+  return <h1>{name}</h1>;
+}
 
-function Hello({ intro, message }) {
+function App() {
   return (
     <div>
-      <h1>{intro}</h1>
-      <p>{message}</p>
+      <Lake name="Lake Tahoe"></Lake>
+      <Lake name="Lake Calhoun"></Lake>
+      <Lake name="Lake Superior"></Lake>
     </div>
   );
 }
 
-ReactDOM.render(
-  <Hello intro="Welcome to React" message="Let's learn some stuff" />,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
